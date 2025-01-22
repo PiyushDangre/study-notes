@@ -1,0 +1,23 @@
+## Eviden Interview Questions
+
+| Question | Topic | Answered? |
+|----------|-------|-----------|
+| Describe project | Project | Y |
+| Hibernate diff between level1 and level2 caches| Hibernate | N |
+| What is collection in java | Collections | Y |
+| What is stream api in java | Steam API | Y |
+| What is circuit breaker | Microservices | N |
+| What is service discovery | Microservices | N |
+| Describe the working of service discovery | Microservices | N |
+| What is synchronized keyword | Java Concurrency | Y |
+| Can there be synchronized block? Difference between synchronized block and method? | Java Concurrency | N |
+|what is finalized keyword| Java |N|
+| How do threads communicate between each other | Java Concurrency | N|
+| Describe deployment pipeline in current project | Project | N |
+| Which design patterns have you worked with | Design Patterns | Y |
+| What is factory pattern | Design Patterns | Y |
+| What is rate limiting | Microservices | Y |
+| What is difference between unique key and primary key | DB / SQL | Y |
+| Can unique key be null? | DB / SQL | Y |
+| What is the difference between truncate and drop and delete | DB / SQL | Y |
+| Have you been involved in monolithic to microservices migration? What were the challenges? | Microservices | N |
