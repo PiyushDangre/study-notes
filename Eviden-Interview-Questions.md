@@ -24,3 +24,4 @@
 | Have you been involved in monolithic to microservices migration? What were the challenges? | Microservices | N |
 | Have you worked with Batch? What is Spring Batch? | Spring Batch | N |
 | What is OutOfMemory Error? How do we prevent the outofmemory error? | Java | N |
+| What are Triggers? On what statement do they work? (Update/Insert) | SQL | Y/N |
