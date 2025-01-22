@@ -6,6 +6,7 @@
 | Describe project | Project | Y |
 | Hibernate diff between level1 and level2 caches| Hibernate | N |
 | What is collection in java | Collections | Y |
+| What is difference between ArrayList and LinkedList? | Collections | Y |
 | What is stream api in java | Steam API | Y |
 | What is circuit breaker | Microservices | N |
 | What is service discovery | Microservices | N |
