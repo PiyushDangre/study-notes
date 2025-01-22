@@ -22,3 +22,5 @@
 | Can unique key be null? | DB / SQL | Y |
 | What is the difference between truncate and drop and delete | DB / SQL | Y |
 | Have you been involved in monolithic to microservices migration? What were the challenges? | Microservices | N |
+| Have you worked with Batch? What is Spring Batch? | Spring Batch | N |
+| What is OutOfMemory Error? How do we prevent the outofmemory error? | Java | N |
