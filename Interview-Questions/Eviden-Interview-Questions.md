@@ -11,6 +11,7 @@
 | What is circuit breaker | Microservices | N |
 | What is service discovery | Microservices | N |
 | Describe the working of service discovery | Microservices | N |
+| Explain how was authentication taken care in your project? Explain the working of JWT token and what it is | Microservices | N |
 | What monitoring tools do you use in current project? | Microservices | N |
 | What is synchronized keyword | Java Concurrency | Y |
 | Can there be synchronized block? Difference between synchronized block and method? | Java Concurrency | N |
