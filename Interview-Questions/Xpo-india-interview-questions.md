@@ -11,3 +11,4 @@
 5. Write Program - Find a integer within a list of integers. Using Stream API.
 7. Make the above program efficient (Space time complexity) 
 8. Write SQL query by joining two tables and eliminate the duplicate based on one column. I tried with Distinct but he said its wrong. 
+9. What are SOLID priniciples?
