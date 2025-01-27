@@ -2,6 +2,8 @@
 
 23<sup>rd</sup> Jan 2025
 
+![XPO Logo](image.png)
+
 0. What is your role and responsibilty and tech stack?
 1. Which version of java you are working on?
 1. What is meant by functional interface?
@@ -12,3 +14,4 @@
 7. Make the above program efficient (Space time complexity) 
 8. Write SQL query by joining two tables and eliminate the duplicate based on one column. I tried with Distinct but he said its wrong. 
 9. What are SOLID priniciples?
+
