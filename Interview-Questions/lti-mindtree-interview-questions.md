@@ -1,4 +1,4 @@
-## LTI Mindtree Interview Questions
+# LTI Mindtree Interview Questions
 
 01<sup>st</sup> Feb 2025 || Face to face mode
 
