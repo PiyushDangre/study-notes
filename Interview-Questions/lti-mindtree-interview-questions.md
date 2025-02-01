@@ -1,6 +1,6 @@
 # LTI Mindtree Interview Questions
 
-01<sup>st</sup> Feb 2025 || Face to face mode
+> 01<sup>st</sup> Feb 2025 || Face to face mode
 
 - Java 17 new features?
 - Java 8 new features?
@@ -31,5 +31,4 @@
 - Have you worked in multithreading? 
 - What is primary key and foreign key?
 - Explain internal working of TreeSet? Solution [here](https://www.javatpoint.com/how-treeset-works-internally-in-java).
-
 
