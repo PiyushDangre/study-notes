@@ -30,5 +30,6 @@
 - Do you know Docker?
 - Have you worked in multithreading? 
 - What is primary key and foreign key?
+- Explain internal working of TreeSet?
 
 
