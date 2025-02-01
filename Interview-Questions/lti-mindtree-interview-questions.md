@@ -5,7 +5,7 @@
 - Java 17 new features?
 - Java 8 new features?
 - Significance of @transactional annotation?
-- What are the different transaction propogation types and what is required new?
+- What are the different transaction propogation types and what is requires_new in transaction propogation?
 - What are the different microservices architecture design patterns?
 - What is circuit breaker patterns and SAGA ?
 - What steps to take to improve the performance of an API?
