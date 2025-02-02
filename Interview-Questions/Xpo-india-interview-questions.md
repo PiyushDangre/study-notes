@@ -2,7 +2,9 @@
 
 23<sup>rd</sup> Jan 2025
 
-![XPO Logo](image.png)
+<!-- ![XPO Logo](image.png) -->
+
+<img src="image.png" width="200px">
 
 0. What is your role and responsibilty and tech stack?
 1. Which version of java you are working on?
