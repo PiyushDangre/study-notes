@@ -69,8 +69,10 @@ In Spring-AOP, only **method** joinpoint is allowed.
     | @AfterReturning  | Called after the joinpoint method executes normally. This runs before @After.|
     | @AfterThrowing  | Called after the joinpoint method throws exception.  |
     | @Around  | Used to wrap logic before and after the joinpoint method.  |
+
 ---
-###
+
+
 Let's say we want some logic to be run before the `Employee.earnSalary()` method call as shown in below example - 
 
 Employee.java
