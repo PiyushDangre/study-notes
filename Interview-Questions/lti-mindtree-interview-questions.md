@@ -33,3 +33,4 @@
 - Explain internal working of TreeSet? Solution [here](https://www.javatpoint.com/how-treeset-works-internally-in-java).
 - What is Encapsulation?
 - What is Aggregation and Composition?
+- How will you create Immutable class? Solution [here](https://www.geeksforgeeks.org/create-immutable-class-java/).
