@@ -31,4 +31,5 @@
 - Have you worked in multithreading? 
 - What is primary key and foreign key?
 - Explain internal working of TreeSet? Solution [here](https://www.javatpoint.com/how-treeset-works-internally-in-java).
-
+- What is Encapsulation?
+- What is Aggregation and Composition?
