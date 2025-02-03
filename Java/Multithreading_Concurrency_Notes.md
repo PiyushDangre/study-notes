@@ -20,3 +20,13 @@
 
 > More explanation here -> [Jenkov Blog](https://jenkov.com/tutorials/java-concurrency/costs.html).
 
+**Concurrency Models**
+
+- Parallel Workers _(Incoming jobs are assigned to different workers. )_
+    - Shared State Workers
+    - Stateless Workers
+- Assembly Line _(Reactive/ Event Driven Systems)_
+- Functional Parallelism _(you implement your program using function calls)_
+
+> More Explanation -> [Jenkov Blog](https://jenkov.com/tutorials/java-concurrency/concurrency-models.html)
+
