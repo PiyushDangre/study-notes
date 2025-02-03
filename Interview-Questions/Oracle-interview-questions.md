@@ -30,7 +30,7 @@ _(List is still incomplete. I will add more questions once I remember..)_
 - What is the difference between implicit and explicit cursor?
 - What is Lamda expression? Write a lambda expression which accepts two input parameters and returns a value after performing some operation.
 - Explain the program for finding frequency of all words in a statements present in a flat file (.txt file).
-- What are static imports in Java ? Its a new feature.
+- What are static imports in Java ? Its a new feature. [Explaination Here](https://www.geeksforgeeks.org/static-import-java/).
 - Can you write multiple methods with body in an Interface in Java?
 - Can you create multiple @Beans of same type in Spring Boot? What config you need to do to select preference?
 - What are the design patterns you have worked on?
