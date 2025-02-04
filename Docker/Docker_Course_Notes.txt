@@ -1,0 +1,363 @@
+** Docker and Kubernetes **
+
+Docker is all about images and containers.
+
+Commands :-
+
+docker --help						=> List down all the docker commands
+docker ps 							=> Lists all the 'running' containers
+docker ps -a 						=> Lists all the containers which you had in the past including the stopped containers
+docker start container_name 		=> Restarts an already stopped container (Its different than 'docker run' as console is not displayed for this one). 
+									   This container is running in the background. Its detached. 	
+							   
+'Attached mode' means that we are actively listening to the output of console for the app.
+
+docker attach container_name 			=> Attaches to the container to listen to log
+docker logs container_name 				=> View the past logs of the container
+docker logs -f container_name			=> View future logs (By attaching again) (Live logs)
+docker stop container_name 				=> Bring down the container
+docker start -a container_name			=> Start container in attached mode
+docker start -d container_name			=> Start container in detached mode
+docker run -it container_name			=> Runs the container in 'interactive' mode. That is we can input and also get output. 
+docker start -a -i container_name		=> Starts a container in interactive mode so that we can input while being in attached mode. 
+docker rm container_name				=> Remove a container. You cannot remove a running container as you will hit an error.
+										Stop a container before removing. 
+docker prune 							=> Remove all the stopped container at once.
+	
+docker images							=> List of images
+docker rmi image_name 					=> Remove image 
+docker images prune						=> Remove all the images
+docker run -d -p 3000:80 --rm image_id 	=> Create the container in detached mode and expose port 80 of container with port 3000 of host machine
+										   and remove the container automatically once stopped.  
+										   
+The image code is used in the container created using the image. Its not copied again. There is just the additional command layer (CMD in Dockerfile).	
+
+All the containers that are created using a particular image will share the image code. That's why the image code is readonly and locked in. 
+
+docker image inspect image_id			=> Check the metadata/configuration of the image (like creation date, full id, os details , layers etc)		
+docker cp source_path destination_path  => Copy files/folders inside the container or from container to your local machine. 
+
+We can name images and containers with custom names. We can associate images with image name:tag.
+docker run -p 8000:80 --name myDockerApp image_name => Create a container with a custom name using '--name' flag.							  
+docker build -t myDockerAppImage:WhateverTag 		=> We can create image name:tag using -t while building the image using dockerfile.
+
+Docker images can be pushed and pulled to and from Docker Hub or any other private registry.
+
+We need to signup in docker hub and create a repo in docker hub to start sharing images.
+
+docker tag old-image-name:old-tag new-repo/new-name => Command to rename an image. When the image is renamed, a clone is created. Old image is still there.
+docker push new-repo/new-name						=> New image is added in docker hub registry.
+
+*** Section 3 : Managing Data in Images and Containers ***
+
+Data is of 3 types - Application data (source code etc) --> Stored in images
+				   - Temporary Data (Session info etc)	--> Stored in containers
+				   - Permanant data (Which needs to be stored in database) --> Stored in containers and Volumes
+				   
+Containers are read-write (Docker allows data manipulation)
+Images are read-only and locked in.
+
+- For data to be persisted on host machine we have to use Volumes. 
+- This data can be read/written by both host machine and containers - the data stored in volumes. Volumes is nothing but we are mapping some folder in local/host
+  machine with some folder inside container. Thus the data becomes persistent. The location of folder in local (host machine) is unknown to developer.
+
+- Volumes can be of two types 
+	- Anonymous volumes
+		- For creating anonymous volume, you can add in Dockerfile --> VOLUME ["path_to_folder/foldername"]
+		- Anonymous volumes are closely bound to the container. That means if the container is removed, then volume and its data is also deleted. This is the case only when container created using --rm flag.
+		- If container is stopped without being removed, and next time another container is created from same image, a new anonymous volume is created. The older volume is still there. But it is useless as the data is also old and from old container.
+		- Above case also applicable when container is removed using docker rm command. The volume will not be removed. 
+		- Anonymous volume can be created in docker file or in container creation command.
+		List of all volumes can be fetched by --> docker volume ls
+	
+	- Named volumes
+		- For creating named volume use -v volumename:/path_to_folder/foldername while creating the container from image. 
+		- In the above command , /path_to_folder/foldername corresponds with the folder path inside container. One which is given in dockerfile.
+		- Named volume is not attached to container.
+		- Even though the container is stopped and removed, the volume is still there in case of named volume.
+		- Named volumes cannot be created in dockerfile.
+
+docker volumes prune 		=> Removes all volumes
+
+docker run -p 3000:80 -d --rm --name containername -v volumename:/app/foldername imagename		=> This defines a named volume. The /app/foldername is path of the data
+																								we want to store in volume. The volumename is volume name. 
+ 
+- There are two types of external data storage in docker --> Volume(Managed by docker) and Bind Mounts (Managed by you)
+
+- Bind mounts help in reflecting even the source code changes as we can store source code in bind mounts. So no need to rebuild image and deploy a new container.
+- Bind mounts differ with Volumes such that we know where the path of storage is in our local host machine. You define a folder path on host machine. 
+- Bind mounts are perfect for persistent and editable data as we know where the storage is.
+
+docker run -p 3000:80 -d --rm --name containername -v path/to/local/folder:/app/foldername imagename => Map path on local to that in ocntainer. this is creating bind mount.
+
+Changes in local folder are automatically reflected to container when using bind mount. Also, there when a bind mount and another volume is defined in command
+while creating the container, the volume with the deeper path is wins and is not overwritten in terms of conflict. 
+
+Anonymous volume helps in avoiding that the data defined in container is not overwritten by any other volume/module. 	
+
+docker run -p 3000:80 -d --rm --name containername -v path/to/local/folder:/app/foldername:ro imagename   => Turn bind mount as read only
+docker volume create volumename			-- create volume
+docker volume rm volumename 			-- remove volume
+docker volume prune 					-- remove all volume
+
+.dockerignore file 			=> Specify files and folders which need to be ignored by the COPY command. To prevent certain files to get copiued in the image. 
+
+--env PORT=8000		=> Set environment variable. 
+
+ENV PORT 80			=> Set environment variable
+
+--build-arg ARG_NAME=some_value 	=> Set the value of argument creating the image (During docker build)
+
+ARG ARG_NAME=80					=> Set the argument for use within the dockerfile. 
+
+*** Section 4 : Cross Container Networking and Communication ***
+
+Out if the box, applications within docker containers can send http requests to the world wide web. 
+Sending requests to the host machine or lets say DB connection to host machine is not supported out of the box. to make it work just replace localhost in your 
+DB connection string with host.docker.internal - this will rresolve in the local machine IP. Thus connection is success.
+
+If a mongodb is installed in another container, and your primary application is installed in another container, the primary app can connect to mongodb using the 
+IP address of mongodb container. The IP can be found by using --> docker container inspect mongodb 
+But this is cumbersome as each time code change needs to be done everytime mongodb IP changes. 
+
+We can create networks in docker to associate containers with. When two or more containers are associated with same network, they do not need to know each other's
+IP address to communicate. we can use the container name instead of IP address in our code to connect to other container. Docker will resolve the IP address
+internally.
+
+docker network create fovorites-net ==> Create network 
+docker nwtwork ls ==> List network
+
+While creating the containers for the network , just pass on the network name in --network arg. Pls note that network has to be created using network create cmd (see above)
+before it can be used while creating a container.
+docker run --name favorites --network faovorites-net -d -rm -p 3000:3000 favorites-node     => here --network arg is used to connect to created network 
+
+Docker will not replace the source code under the hood. Docker will detect any request that leaves the container and replaxce the container name with actual IP address.
+
+Section 6 :-
+
+Docker compose makes it easy to work with multi container environments. It allows u to replace docker build, run commands with just one configuration command.
+
+Docker compose does  not replace dockerfiles.
+
+In project folder (parent to all projects) create a docker-compose.yaml file. Describe project setup there. 
+
+If we specify a dcker-compose.yaml , then docker creates by default a network and covers all specified services/containers under it. 
+
+docker-compose up 		=> Starts all services/containers
+docker-compose down 	=> Stops all. 
+
+Docker-compose.yaml basically has all the instructions that we type in termina; separately for each container condensed into one. These are stored in a 
+configuration file like format.
+
+Section 7 :- Utility containers
+
+docker exec -it container_name npm init 		=> docker exec helps in running commands inside a particular container. 
+
+docker run -it -v local_path:/app image_name npm install => Here the npm install command overwrites the mentioned CMD command in the dockerfile. THus we can run commands of our own choice
+
+If ENTRYPOINT is mentioned in the dockerfile instead of CMD, then because of the above command, the npm install is CONCATENATED to the original CMD command. Thus 
+we can make use of the original CMD command as well and add the command of our own. 
+
+docker-compose run service_name .	=> Allows us to run a single service by its service name from a list of multiple services defined in docker-compose.yaml file.
+docker-compose run service_name npm init 	=> Run some command inside the container (Here used npm init)
+
+Section 8 :- PHP and Laravel Setup (Example of how docker makes environment setup easy)
+
+We have to install the following containers (invludeing utility containers)
+
+- PHP interpreter
+- MySQL
+- Nginx web server
+- Composer
+- Laravel Artisan
+-NPM 
+
+In case of direct container to container communication,  we do not need to expose port. 
+
+If we write :delegated in the end of bind moount declaration, then the data is not written to the container or vice versa in real time. It does batch processing.
+That means data is written in some time. This imporoves performance. 
+
+Final Dcoker compose :-
+
+version : "3.8"
+services: 
+ server:
+	image : nginx: 'stable-alpine'
+	ports :
+		- '8000:80'
+	volumes:
+		- ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+ php:
+	build:
+		context: ./dockerfiles
+		dockerfile: php.dockerfile
+	volumes:
+		- ./src:/var/www/html:delegated
+ mysql:
+	image : mysql
+	env_file: 
+		- ./env/mysql.env
+ composer:
+	build:
+		context: ./dockerfiles
+		dockerfile: composer.dockerfile
+	volumes:
+		- ./src:/var/www/html
+		
+------------------------------------------------------------------
+
+docker-compose up server mysql php  => Start only defined services
+
+Section 9 : Deploying Containers
+
+In production, when you move your comtainer to prod/ or deploy, you should not use bind mounts. 
+
+Docker compose is not used to deploy on commercial cloud providers as a lot of extra information is demanded by them.
+We deploy individually the services/containers in AWS ECS. 
+Docker network approach won;t work anymore in AWS.So using docker compose will not work.
+
+When we add multiple containers under the same task in AWS , they can all communicate with each other by using 'localhost'.
+
+EFS => Elastic file system is to be used as volume in AWS. EFS attaches hard drives to the containers to sustain data beyond restart.
+
+Multi stage dockerfiles allow you to have one dockerfile with multiple build steps/stages
+
+Kubernetes 
+----------------------------
+
+Kubernetes => Independent container orchestration
+			  - Its a system to help you with container deployment.
+			  - Its just about deployment.
+
+Problems with manual deployment of containers :-
+			- Something in container app might go wrong and container might crash. They need to be replaced once they are crashed. We cannot just keep monitoring logs all day. 
+			- We might need more container instances on traffic spikes.
+			- Incoming traffic should be equally distributed among multiple containers.
+Any major cloud service can easily solve the above problem by using load balancer, autoscaling and auto restart etc. but the configuration of the containers is very closely linked to the cloud platform.
+That means there is lock in with a particular vendor. SO in future if we decide to switch to other ckloud provider we will have to learn new terms and terminologies and same config file will not work there. 
+Thats why we have kubernetes. 
+
+Kubernetes is an open source system and a defacto standard for managing/orchestrating container deployments. 
+Enables us to write a standard kubernetes configuration file which can be passed down to any cloud provider to get same type of environment.
+Cloud provider specific settings can be added. 
+its not a cloud service provider like aws or azure. 
+Its not just a software - its a collection of concepts and tools. 
+Its not a replacement for docker - instead it works along with docker. 
+Kubernetes is like docker-compose for multiple machines.
+
+Kubernetes will not manage your infrastructure. You have to create it yourself. 
+Pods have containers inside them. Typically and as a standard practice - one Pod will have one container. 
+Worker node is like a VM/ Computer which will have Pods inside them. For eg. an EC2 instance. Worker node is managed by master node.
+Pods are managed by kubernetes master node.
+
+Kubelet is a software installed on the worker node which is responsible for the communication of the worker node with the master node. This enables the master node
+to control the Pods on the worker node.
+
+Kube-proxy is a software installed on the worker node which is responsible for managing the incoming and outgoinf traffic to and from respectove worker node pods.
+
+Apart from this - Docker software needs to be installed on worker node to manage the pods installed in worker node.
+
+kubectl --> This is a tool we will be using to send instructions to cluster. its called kube control tool.
+
+Kubernetes objects ==> Kubernetes works with so called objects 	- Pods 
+																- Deployments
+																- Services
+																- Volumes
+Objects can be created imperatively and declaratively.
+Pods ==> Smallest unit which can run one or multiple containers inside that can be run
+		 The most common use case is one container in one pod.
+		 The pods can also hold shared resources like volumes. Pods are parts of the cluster and can communicate. Pod has a cluster internal IP address.
+		 Contaianers inside the pods can communicate with each other.
+		 We can create a pod through kubernetes using some commands which we will learn later.
+		 Pods are ephemeral which means they do not persist. That means all data is lost if pod is removed/stopped.
+		 Entire idea behind using kubernetes is that we want kubernetes to create, remove replace failing pods etc.
+		 For this we will use controllers - > Deployment object.
+		 
+Install Minikube on local
+																
+		We can define what pods etc we want in deployment object and kubernetes creates it for us. We don;t manually have to pick VMs and worker nodes etc - Kubernetes does it for us.
+		Deployments can be scaled, paused, deleted and rolled back.
+		Deployment object controls or manages pods.
+
+Using imperatoive approach for deployment object demo
+		We still need to use docker to create application image. The only diff is that we don't run the containers ourselves.
+		So we still need dockerfile in the app.
+		We want to run the app on cluster.
+		minikube status -> check if cluster is running
+		kubectl ==> this command always runs on the local machine. 
+		kubectl help 		=> Help command for kubectl
+		
+		kubectl create deployment deployment_name --image=path/to_dockerhub_image_of_app	=> Create the deployment object
+		
+		By using above command the kubectl creates the pod with container of our application image inside the cluster. 
+		Please note that the kubectl command uses the image from dockerhub repo and we cannot use local docker image. 
+		
+		kubectl get pods 	=> SHows pods status
+		
+		minikube dashboard	=> Provides a web dashboard which can be opened in web browser to see details of our deployment
+
+kubectl behind the scenes 
+		kubectl create deployment --image = imagenPath ---> This command gives instructions to Master Node (Control Plane) for pod creation. 
+		The scheduler within master node analyzes currently running pods and finds the best node for forming new pod. 
+		A worker node is selected and the Kubelet within the worker node creates and manages the Pod and Container.
+		
+The service object
+		To reach a pod from outside network we need a service object. 
+		pods actually have an internal ip address by default. It changes when the pod is replaced. So its of no use.
+		Service object exposes the pod to outside world.
+		Service groups Pods together and gives them an unchangeable shared IP address. and makes them reachable from inside cluster and outside cluster
+		Without services pods are very hard to reach and commubnication is difficult
+
+Exposing a deployment with a servvice.
+		kubectl expose deployment deployment_name --type=LoadBalancer --port=8080 
+			=> The above command will expose a deployment to outside world along with a loadbalancer if it is available with your cloud provider. Minikube also does it. 
+		kubectl get service	=> we should be able to see the above service in the list. External IP should be <PENDING> in minikube but in actual cloud provider we will see the IP where we can access the POD.
+		in Minikube we have to run => minikube service deployment_name		(This is only minikube specific because IP is pending)
+					=> After above command , run the Ip obtained in table in web browser to get running containwer nodejs application.
+					
+If the pod is forced to fail programatically using process.exit() , we will observe that kubernetes will restart it. See with => kubectl get pods
+
+For scaling the pod --> kubectl scale deployment /first-app --replicas=3
+					=> The above cmd creates 2 more copies of the same pod with same container. The load balancer inhernetly distributes traffic between the 3 pods automatically.
+					
+For updating the source code --> Do the code change and create a new image and push it to dockerhub along with a new tag name (Increment version)
+				docker build -t academind/first-app:2 .
+				docker push academind/kub-first-app
+				kubectl set image deployment/first-app kub-first-app/kub-first-app:2 		(Specify tag at the end, thus kubernetes detects that new version is there so then it re-downloads the image)
+				kubectl rollout status deployment/first-app		(Check the status of our particular deployment)
+
+Declarative approach
+		Kubernetes allows us to create resource defination file.
+		create deployment.yaml in project directory
+		kubectl apply -f=deployment.yaml
+For service
+		For service we have to create the service.yaml
+		A selector decides which outher resources should be controlled by this partivular resource.
+		
+Section 13 :- Kubernetes Storage and Data 
+		Kubernetes is quite flexible with Volumes as to where we can actually store data. It supports many types and drivers. 
+		Volume lifetime is dependent on pods lifetime. Because the volume is the part of pod. It survives container restart and removal.
+		Kubernetes Volume does not survive the POD restart and removal. So volumes are not necessarily persistent.
+		As these are so closely bind - we have to define the volume where we have pod specification.
+
+Persistent volumes are independent from PODS.
+		Persistent volumes are independent from the nodes.
+		For persistent volume we have to create a different host-pv.yaml file. 
+		We have to also define persistent volume claim. Create anpther yaml file --> host-pvc.yaml file.
+		
+ConfigMaps
+		Having key value pairs in a separate entity/resource for the cluster.
+		Use valueFrom --> configMapKeyRef in the deployment.yaml
+		
+Section 14 :- Kubernetes Networking
+
+		localhost is the magic address on which two containers can communicate with each other provided they are running in the same pod
+		Apps from different pods but same cluster can communicate using IP. (cluster IP). Its important to have services bind to the pod of type ClusterIP.
+		More effective way of inter pod communication is to use the kubernetes provided environment variable to obtain IP of pod deployed within cluster. 
+			->  SERVICENAME_SERVICE_HOST ==> Environment variable which gives you the IP of service.
+		Kubernetes has CoreDNS pre-installed.=> We can just use our servicename.namespace => authservice.default
+		We get the auto-generated domains to use with services by virtue of CoreDNS.
+		
+Section 15 :- Kubernetes cluster deployment in AWS EKS
+		
+		EFS can be added as volume driver. Watch video for more details.
