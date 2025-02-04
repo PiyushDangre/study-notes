@@ -61,7 +61,4 @@ It does not occur if multiple threads are just **reading** the same resource.
 
 We can create the shared objects between threads as immutable to achieve thread safety.
 
-| Method | Task |
-|--------|------|
-| Thread | Create a Thread |
-| Runnable | Create a Thread |
+_(To be continued .. )_
