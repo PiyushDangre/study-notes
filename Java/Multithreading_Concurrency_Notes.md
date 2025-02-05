@@ -61,4 +61,33 @@ It does not occur if multiple threads are just **reading** the same resource.
 
 We can create the shared objects between threads as immutable to achieve thread safety.
 
-_(To be continued .. )_
+**Java Memory Model**
+
+In java memory model, the different entities are stored at different locations -
+
+- It can be stored in thread stack memory.
+- It can be stored in heap memory.
+
+| Entity | Location where it is stored |
+|--------|-----------------------------|
+| Local Variable (Primitive) | Thread Stack |
+| Local Variable Reference (which is pointing to some object)| Thread Stack |
+| Local Variable Object (which some reference is pointing to)| Heap Memory |
+| Any Object | Heap Memory |
+| Object Member Variables (Even if primitive types) | Heap Memory |
+| Object Member Variables (Reference to another Object) | Heap Memory |
+| Static class variables | Heap Memory |
+| Static Class Definition | Heap Memory |
+
+**Hardware Memory**
+
+![alt text](images/hardware_memory_model.png)
+
+There are 3 components - 
+- CPU -> Can have multiple cores and can run more than one thread at a time. 
+- CPU Registers -> CPU can read/write from here the fastest.
+- CPU cache memory -> CPU  can read/write from here but slower than CPU registers.
+- RAM (Main Memory) -> Objects are read from here.  Comparatively the slowest to read/write to for the CPU. 
+
+As the memory is read from cache, main and registers, the objects are scattered across the memory model. There needs to be synchronization between various threads while reading/writing back objects to main memory. 
+
