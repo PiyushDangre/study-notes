@@ -91,3 +91,6 @@ There are 3 components -
 
 As the memory is read from cache, main and registers, the objects are scattered across the memory model. There needs to be synchronization between various threads while reading/writing back objects to main memory. 
 
+>  Parts of the thread stacks and heap may sometimes be present in CPU caches and in internal CPU registers.
+
+
