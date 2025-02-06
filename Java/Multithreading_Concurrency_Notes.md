@@ -1,5 +1,5 @@
 # Java Multithreading & Concurrency Notes
-<small>02<sup>nd</sup> Feb 2025</small>
+02<sup>nd</sup> Feb 2025
 
 || ॐ साई राम ||
 
@@ -92,5 +92,37 @@ There are 3 components -
 As the memory is read from cache, main and registers, the objects are scattered across the memory model. There needs to be synchronization between various threads while reading/writing back objects to main memory. 
 
 >  Parts of the thread stacks and heap may sometimes be present in CPU caches and in internal CPU registers.
+
+Because objects and variables are scattered across different parts of the memory, following problems may occur ->
+- Visibility of thread updates (writes) to shared variables.
+- Race conditions when reading, checking and writing shared variables.
+
+**Synchronized keyword**
+
+- A synchronized block in Java is synchronized on some object. All synchronized blocks synchronized on the same object can only have one thread executing inside them at the same time.
+- All other threads attempting to enter the synchronized block are blocked until the thread inside the synchronized block exits the block.
+- The synchronized keyword can be used to mark four different types of blocks:
+    - **Instance methods** : A synchronized instance method in Java is synchronized on the instance (object) owning the method
+
+        ```java
+        public class MyCounter {
+                private int count = 0;
+                public synchronized void add(int value){
+                    this.count += value;
+                }
+        }
+        ```
+    - Static methods
+
+        ```java
+        public static MyStaticCounter{
+                private static int count = 0;
+                public static synchronized void add(int value){
+                count += value;
+            }
+        }
+        ```
+    - Code blocks inside instance methods
+    - Code blocks inside static methods
 
 
