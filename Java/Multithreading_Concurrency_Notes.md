@@ -125,4 +125,10 @@ Because objects and variables are scattered across different parts of the memory
     - Code blocks inside instance methods
     - Code blocks inside static methods
 
+## Inter-thread communication
+
+Also called Inter-thread **signalling**. Carried out by following methods present in object class - 
+- wait()
+- notify()
+- notifyAll()
 
