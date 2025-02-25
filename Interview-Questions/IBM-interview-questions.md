@@ -55,6 +55,14 @@ Interview questions for the position of Java FullStack Cloud Engineer. Exp. 8+ y
 |-------|----------|-----------|
 | 1 | Explain Maven lifecycle | N | 
 
+### Git
+
+| Sr No | Question | Answered? |
+|-------|----------|-----------|
+| 1 | Common Git Commands | Y |
+| 2 | Difference between Git Merge and Git Fetch | N |
+| 3 | How do you revert a commit so that it is reflected over remote repo | N |
+| 4 | How do you Cherry pick in Git? What is Cherry Picking? | N |
 
 ### DevOps
 
