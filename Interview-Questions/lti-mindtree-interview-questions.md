@@ -35,3 +35,4 @@
 - What is Aggregation and Composition?
 - How will you create Immutable class? Solution [here](https://www.geeksforgeeks.org/create-immutable-class-java/).
 - What are the latest features introduced in HTML5?
+- Explain Pure and Impure Pipes in Angular. [Solution](https://www.geeksforgeeks.org/explain-pure-and-impure-pipe-in-angular/)
