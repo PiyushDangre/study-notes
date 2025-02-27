@@ -3,6 +3,8 @@ _25th Feb 2025_
 
 Interview questions for the position of Java FullStack Cloud Engineer. Exp. 8+ years.
 
+## Questions
+
 ### Angular
 
 | Sr No | Question | Topic | Answered? |
@@ -15,6 +17,7 @@ Interview questions for the position of Java FullStack Cloud Engineer. Exp. 8+ y
 | 6 | How do we create custom directive in Angular? (_Give syntax_) | Angular | N | 
 | 7 | What are HTTP Interceptors in Angular? What is its function? | Angular | Y |
 | 8 | What is two-way data binding in Angular? | Angular | Y |
+| 9 | What is meant by structural directives? Give examples. | Angular | Y |
 
 ### Spring Boot
 
@@ -22,11 +25,12 @@ Interview questions for the position of Java FullStack Cloud Engineer. Exp. 8+ y
 |-------|----------|-------|-----------|
 | 1 | What are different Spring Bean scopes?| Spring Boot | N |
 | 2 | How does spring know which property file to pickup? | Spring Boot | Y |
-| 3 | Can we have multiple Spring Profiles active? | Spring Boot | Y |
+| 3 | [Can we have multiple Spring Profiles active?](https://www.baeldung.com/spring-profiles) | Spring Boot | Y |
 | 4 | We have multiple Spring Beans defined of the _same_ type. How do we specify which one to use while injecting?  | Spring Boot | Y |
-| 5 | What does @Profile annotation declared over @Component do? | Spring Boot | Y |
+| 5 | [What does @Profile annotation declared over @Component do?](https://www.baeldung.com/spring-profiles) | Spring Boot | Y |
 | 6 | How will you implement token based authentication using Spring Security? | Spring Security | N |
 | 7 | What are filters in Spring Security? | Spring Security | N |
+| 8 | Difference between 405 and 403 HTTP Status codes? All the other codes were asked as well. | Spring Boot | N |
 
 ### JPA & Hibernate
 
@@ -46,8 +50,8 @@ Interview questions for the position of Java FullStack Cloud Engineer. Exp. 8+ y
 | 2 | Which are the intermediate stream operations? | Y |
 | 3 | What does `,map()`, `.filter()` accept? | Y |
 | 4 | Which stream methods accept Consumer and Supplier interfaces? | Y |
-| 5 | Callable vs Runnable in multithreading? | N |
-| 6 | What is executor framework? Why is it used? | Y |
+| 5 | [Callable vs Runnable in multithreading?](#id1) | N |
+| 6 | [What is executor framework? Why is it used?](https://jenkov.com/tutorials/java-util-concurrent/executorservice.html) | Y |
 
 ### Maven
 
@@ -71,8 +75,5 @@ Interview questions for the position of Java FullStack Cloud Engineer. Exp. 8+ y
 | 1 | Explain common docker commands | N |
 | 2 | Have you ever written any deployment pipeline script, Groovy etc? | N |
 | 3 | Which is the underlying cloud being used for RedHat OpenShift in your Project? | Y |
-
-
-
 
 
