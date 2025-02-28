@@ -9,7 +9,7 @@ Interview questions for the position of Java FullStack Cloud Engineer. Exp. 8+ y
 
 | Sr No | Question | Topic | Answered? |
 |-------|----------|-------|-----------|
-| 1 | How do you protect Angular routes? | Angular | N |
+| 1 | [How do you protect Angular routes?](https://medium.com/@filipejohansson/how-to-protect-your-routes-in-angular-795c888cc21e) | Angular | N |
 | 2 | How do you transfer data between various components. | Angular | Y |
 | 3 | How do you pass data between child and parent components | Angular | Y |
 | 4 | How will you implement lazy loading of components in Angular | Angular | Y |
@@ -23,14 +23,14 @@ Interview questions for the position of Java FullStack Cloud Engineer. Exp. 8+ y
 
 | Sr No | Question | Topic | Answered? |
 |-------|----------|-------|-----------|
-| 1 | What are different Spring Bean scopes?| Spring Boot | N |
+| 1 | [What are different Spring Bean scopes?](https://www.digitalocean.com/community/tutorials/spring-bean-scopes)| Spring Boot | Y |
 | 2 | How does spring know which property file to pickup? | Spring Boot | Y |
 | 3 | [Can we have multiple Spring Profiles active?](https://www.baeldung.com/spring-profiles) | Spring Boot | Y |
 | 4 | We have multiple Spring Beans defined of the _same_ type. How do we specify which one to use while injecting?  | Spring Boot | Y |
 | 5 | [What does @Profile annotation declared over @Component do?](https://www.baeldung.com/spring-profiles) | Spring Boot | Y |
 | 6 | How will you implement token based authentication using Spring Security? | Spring Security | N |
-| 7 | What are filters in Spring Security? | Spring Security | N |
-| 8 | Difference between 405 and 403 HTTP Status codes? All the other codes were asked as well. | Spring Boot | N |
+| 7 | [What are filters in Spring Security?](https://medium.com/@tanmaysaxena2904/spring-security-the-security-filter-chain-e09e1f53b73d#:~:text=Some%20of%20the%20core%20security,and%20handles%20security%2Drelated%20errors) | Spring Security | N |
+| 8 | [Difference between 405 and 403 HTTP Status codes? All the other codes were asked as well.](https://www.javaguides.net/2021/01/rest-api-http-status-codes.html) | Spring Boot | N |
 
 ### JPA & Hibernate
 
