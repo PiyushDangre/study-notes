@@ -13,7 +13,7 @@
 8. How do you enable lazyLoading of components in Angular?
 9. Any questions for me?
 
-## 28th Jan 2025 (L1 Interview)
+## 28th Jan 2025 (L1 Interview) - with solution hyperlinks
 
 | Sr No | Question | Topic | Answered? |
 |-------|----------|-------|-----------|
