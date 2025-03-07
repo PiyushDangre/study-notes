@@ -79,4 +79,3 @@ Spring Security 6+ has undergone significant changes, especially with the remova
 - **OAuth2 & JWT**: `JwtDecoder`, `OAuth2UserService`
 - **Security Annotations**: `@PreAuthorize`, `@RolesAllowed`
 
-Would you like a **Spring Security 6+ example** with JWT authentication? 😊
