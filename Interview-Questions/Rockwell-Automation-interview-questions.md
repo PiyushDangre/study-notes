@@ -17,4 +17,5 @@ What is meant by Microservices? | Microservices | Y |
 | What is meant by Angular Guards? | Angular | Y |
 | What is your responsibility in your current project? | Project | Y |
 | Was your current project already developed when you joined? | Project | Y |
+| Do you have experience with Azure services for monitoring/storing application logs? | Cloud | Y |
 
