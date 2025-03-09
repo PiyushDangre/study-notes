@@ -28,3 +28,23 @@
 | 9 | [What are starter dependencies in Spring Boot?](https://www.baeldung.com/spring-boot-starters) | Spring Boot | N |
 | 10 | [What is difference between Array and ArrayList? In terms of data types of objects that we can store?](https://www.geeksforgeeks.org/array-vs-arraylist-in-java/) | Java | N |
 | 11 | [What are the two categories of exceptions in Java and explain them using examples.](https://www.geeksforgeeks.org/exceptions-in-java/) | Java | N |
+
+## 08th March 2025
+
+1. What is fail safe and fail fast operator
+1. Write a query to display 1st three letters of data of each column in employee table
+1. What is Singleton Pattern?
+1. How do we breakdown Singleton Pattern? (Reflection)
+1. What are the enhancements in HashMap internal implementation in Java 8?
+1. How do we use Reflection in Java?
+1. Which architecture you use in Microservices?
+1. What is session and sessionFactory ?
+1. Which is thread safe among session and sessionFactory?
+1. [Which is default fetch type in @OneToOne and @OneToMany?](http://stackoverflow.com/questions/26601032/default-fetch-type-for-one-to-one-many-to-one-and-one-to-many-in-hibernate)
+1. Which version of Angular and Spring Boot , Java used?
+1. When using API Gateway, we have predicate and filters, any idea about that?
+
+## 08th March 2025
+
+1. What is change detection in Angular any experience with it?
+1. How do we create multiple workspaces inside one single Angular workspace? (Angular Workspaces)
