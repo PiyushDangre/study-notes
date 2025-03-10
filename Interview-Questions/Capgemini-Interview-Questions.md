@@ -43,6 +43,7 @@
 1. [Which is default fetch type in @OneToOne and @OneToMany?](http://stackoverflow.com/questions/26601032/default-fetch-type-for-one-to-one-many-to-one-and-one-to-many-in-hibernate)
 1. Which version of Angular and Spring Boot , Java used?
 1. When using API Gateway, we have predicate and filters, any idea about that?
+1. Explain OAuth protocol? How it works?
 
 ## 08th March 2025
 
