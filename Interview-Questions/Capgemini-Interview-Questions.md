@@ -49,3 +49,7 @@
 
 1. What is change detection in Angular any experience with it?
 1. How do we create multiple workspaces inside one single Angular workspace? (Angular Workspaces)
+
+## 15 March 2025
+
+1. [How is exception handling done in Spring Boot application?](https://www.geeksforgeeks.org/exception-handling-in-spring-boot/)
