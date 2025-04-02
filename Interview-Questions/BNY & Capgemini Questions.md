@@ -27,3 +27,4 @@
 | Explain what is a cursor ? | Database       | N |
 | Give example of a query where we are performing SQL Injection attack. Explain what is SQL Injection. | SQL | N |
 | Explain right outer join ? | SQL | N |
+ | What are built in pipes and custom pipes? | Angular | Y |
