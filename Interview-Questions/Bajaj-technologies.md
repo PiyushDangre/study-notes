@@ -14,4 +14,6 @@ Virtual interview [03rd July 2025]
 | 9 | Explain all the important interfaces and classes in Collections Framework.                                                        | Java |
 | 10 | What is meant by Database Normalisation?                                                                                          | Database|
 | 11 | How will you design a Order Management System from Application point of view? Low level design question.                          | Java |
+| 12 | Explain Bean lifecycle in Spring Framework | Spring |
+| 13 | How will you create a custom authentication mechanism in Spring Security? | Spring |
 
