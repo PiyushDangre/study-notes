@@ -16,4 +16,5 @@ Virtual interview [03rd July 2025]
 | 11 | How will you design a Order Management System from Application point of view? Low level design question.                          | Java |
 | 12 | Explain Bean lifecycle in Spring Framework | Spring |
 | 13 | How will you create a custom authentication mechanism in Spring Security? | Spring |
+| 14 | How will you handle stakeholders when project is delayed due to unforeseen situations? | General | 
 
