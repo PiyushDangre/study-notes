@@ -63,3 +63,20 @@
 | 16 | [How will you identify memory leaks in Java / Spring Boot application?](https://medium.com/@abhishekranjandev/becoming-a-memory-leak-detective-unraveling-and-fixing-memory-leaks-in-your-spring-boot-859af9295654) | Java | N |
 | 17 | [What are memory leaks in Java?](https://www.baeldung.com/java-memory-leaks) | Java | N |
 
+__
+
+## Round 1 
+**Virtual Mode** interview held on 02nd July 2025
+
+1. java 17 new features
+1. Stream API grouping by example code
+1. SQL find 2nd highest record
+1. What are Java Records? Why used it?
+1. What is Functional interface?
+1. Examples of common functional interfaces
+1. What are lambda expression? Why used?
+1. Explain circuit breaker pattern and how it's implemented
+1. Explain what is service discovery and how it is implemented
+1. How will you call 5 different third party API calls most efficiently from your service?
+1. How will u create custom executor service? 
+
