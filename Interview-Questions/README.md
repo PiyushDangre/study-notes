@@ -1,0 +1,1 @@
+This folder consists of all the interview questions that I faced during my quest to switch jobs in 2025. 
