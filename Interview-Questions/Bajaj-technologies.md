@@ -17,4 +17,4 @@ Virtual interview [03rd July 2025]
 | 12 | Explain Bean lifecycle in Spring Framework | Spring |
 | 13 | How will you create a custom authentication mechanism in Spring Security? | Spring |
 | 14 | How will you handle stakeholders when project is delayed due to unforeseen situations? | General | 
-
+| 15 | How do you achieve immutability in a class? | Java |
