@@ -33,5 +33,6 @@
 | 27    | What are Profiles?                                                                                               |
 | 28    | How do we separate out Configuration from Services?                                                              |
 |  29   | How is Redis implemented in Spring Boot ? |
+| 30 | Circuit breaker pattern and Retry mechanism - How will you implement it in your microservice? |
 
 ...._to be updated once I remember more questions_.                                                                                                  |
