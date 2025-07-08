@@ -5,9 +5,9 @@
 | Sr No | Question                                                                                                         |
 |-------|------------------------------------------------------------------------------------------------------------------|
 | 1     | Fail Fast vs Fail safe iterators                                                                                 | 
-| 2     | What is Optional           |                                                                                      
-| 3     | Why do we use Sealed classes |                                                                                     
-| 4     | Why do we use Record classes and what are they? |                                                                  
+| 2     | What is Optional                                                                                                 |                                                                                      
+| 3     | Why do we use Sealed classes                                                                                     |                                                                                     
+| 4     | Why do we use Record classes and what are they?                                                                  |                                                                  
 | 5     | What is Transient Keyword?                                                                                       |
 | 6     | What is Volatile Keyword?                                                                                        |
 | 7     | Internal impl of HashMap?                                                                                        |
@@ -32,7 +32,9 @@
 | 26    | How do microservices communicate with each other? Have you used FeignClient?                                     |
 | 27    | What are Profiles?                                                                                               |
 | 28    | How do we separate out Configuration from Services?                                                              |
-|  29   | How is Redis implemented in Spring Boot ? |
-| 30 | Circuit breaker pattern and Retry mechanism - How will you implement it in your microservice? |
+|  29   | How is Redis implemented in Spring Boot ?                                                                        |
+| 30 | Circuit breaker pattern and Retry mechanism - How will you implement it in your microservice?                    |
+| 31 | [What is Metaspace in JVM Memory](https://www.geeksforgeeks.org/java/metaspace-in-java-8-with-examples/)         |
+| 32 | What is Java's CompletableFuture? | 
 
-...._to be updated once I remember more questions_.                                                                                                  |
+...._to be updated once I remember more questions_.                                                                                                  
