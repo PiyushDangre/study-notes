@@ -32,5 +32,6 @@
 | 26    | How do microservices communicate with each other? Have you used FeignClient?                                     |
 | 27    | What are Profiles?                                                                                               |
 | 28    | How do we separate out Configuration from Services?                                                              |
+|  29   | How is Redis implemented in Spring Boot ? |
 
 ...._to be updated once I remember more questions_.                                                                                                  |
