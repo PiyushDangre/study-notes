@@ -3,9 +3,10 @@
 1. Core Java
 2. Advanced Java
 3. Spring & Spring Boot Framework
-4. SQL - PostGreSQL / OracleSQL
-5. Database Theory
-6. Data Structures & Algo
-7. Angular
-8. System Design
+4. Microservices
+5. SQL - PostGreSQL / OracleSQL
+6. Database Theory
+7. Data Structures & Algo
+8. Angular
+9. System Design
    
