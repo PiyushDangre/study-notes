@@ -1,7 +1,7 @@
 # Interview Prep
 
-1. Java Basics
-2. Java Advanced
+1. Core Java
+2. Advanced Java
 3. Spring & Spring Boot Framework
 4. SQL - PostGreSQL / OracleSQL
 5. Database Theory
