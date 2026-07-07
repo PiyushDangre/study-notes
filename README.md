@@ -1,4 +1,4 @@
-# Interview Prep
+# Interview Preparation - Super Index
 
 1. Core Java
 2. Advanced Java
