@@ -9,6 +9,7 @@
     1. Garbage collector
 1. Spring & Spring Boot Framework
 1. Microservices
+1. JPA and Hibernate
 1. SQL - PostGreSQL / OracleSQL
 1. Database Theory
 1. Data Structures & Algo
