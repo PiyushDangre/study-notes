@@ -5,7 +5,7 @@
     2. Revise past study notes and make new wherever you think required.
     3. Go through all the interview questions pertaining to Core Java and prep accordingly.
 1. Advanced Java
-    1. Collections Framework
+    1. [Collections Framework](https://github.com/PiyushDangre/JavaBasics/tree/master/src/collections)
     1. [Stream API](https://github.com/PiyushDangre/JavaBasics/tree/master/src/streamsapi)
     1. Multithreading and Concurrency
     1. Java Memory Model / JVM
