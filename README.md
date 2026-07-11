@@ -1,6 +1,9 @@
 # Interview Preparation - Super Index
 
 1. Core Java
+    1. Read Core Java Theory from Java T Point and TutorialsPoint
+    2. Revise past study notes and make new wherever you think required. \
+    3. Go through all the interview questions pertaining to Core Java and prep accordingly.
 1. Advanced Java
     1. Collections Framework
     1. Stream API
