@@ -6,7 +6,7 @@
     3. Go through all the interview questions pertaining to Core Java and prep accordingly.
 1. Advanced Java
     1. Collections Framework
-    1. Stream API
+    1. [Stream API](https://github.com/PiyushDangre/JavaBasics/tree/master/src/streamsapi)
     1. Multithreading and Concurrency
     1. Java Memory Model / JVM
     1. Garbage collector
