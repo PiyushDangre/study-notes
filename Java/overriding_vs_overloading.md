@@ -11,6 +11,7 @@
 - access modifiers can be different
 - Return type has to be same (Otherwise compiler will complain)
 - Overloaded methods cannot be static and non static (This will be method duplication - compiler will complain)
+- Method overriding is an example of static binding - where which method to call is decided at compile time.
 
 #### Method Overloading
 
@@ -22,6 +23,7 @@
   - Overriding method can throw checked exception which is narrower than the one declared in original method.
 - Static method cannot be overridden and final method cannot be inherited (and overridden).
 - Constructor cannot be overriden.
+- Method overloading is an example of **Dynamic Binding** where which method to call is decided by JVM at runtime. 
 
 
   
