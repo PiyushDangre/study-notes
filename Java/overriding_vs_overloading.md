@@ -3,7 +3,7 @@
 <img width="2155" height="1196" alt="Method_Inheritance_Rules_2" src="https://github.com/user-attachments/assets/ca04e025-6d8c-4354-ac6b-96904e5f76fb" />
 
 
-#### Method Overriding
+#### Method Overloading
 
 - number of arguments can differ
 - types of arguments can differ
@@ -13,7 +13,7 @@
 - Overloaded methods cannot be static and non static (This will be method duplication - compiler will complain)
 - Method overriding is an example of **static binding** - where which method to call is decided at compile time.
 
-#### Method Overloading
+#### Method Overriding
 
 - Method arguments have to be same. There should be no change in type or number of arguments.
 - Return type should be same or subtype of original return type in superclass.
@@ -23,7 +23,8 @@
   - Overriding method can throw checked exception which is narrower than the one declared in original method.
 - Static method cannot be overridden and final method cannot be inherited (and overridden).
 - Constructor cannot be overriden.
-- Method overloading is an example of **Dynamic Binding** where which method to call is decided by JVM at runtime. 
+- Method overloading is an example of **Dynamic Binding** where which method to call is decided by JVM at runtime.
+- The original method which has been overridden can be called from subclass method using **super** keyword.
 
 
   
