@@ -1,5 +1,8 @@
 ### Rules of Method Overriding and Method Overloading
 
+<img width="2155" height="1196" alt="Method_Inheritance_Rules_2" src="https://github.com/user-attachments/assets/ca04e025-6d8c-4354-ac6b-96904e5f76fb" />
+
+
 #### Method Overriding
 
 - number of arguments can differ
@@ -20,6 +23,5 @@
 - Static method cannot be overridden and final method cannot be inherited (and overridden).
 - Constructor cannot be overriden.
 
-<img width="2155" height="1196" alt="Method_Inheritance_Rules_2" src="https://github.com/user-attachments/assets/ca04e025-6d8c-4354-ac6b-96904e5f76fb" />
 
   
