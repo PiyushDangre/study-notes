@@ -18,5 +18,8 @@
   - Overriding method can throw unchecked exception (any number) regardless of whether the exception is declared in original method.
   - Overriding method can throw checked exception which is narrower than the one declared in original method.
 - Static method cannot be overridden and final method cannot be inherited (and overridden).
-- Constructor cannot be overriden. 
+- Constructor cannot be overriden.
+
+<img width="2155" height="1196" alt="Method_Inheritance_Rules" src="https://github.com/user-attachments/assets/0abb608e-f451-4e29-b6dc-1a25e73f38d6" />
+
   
