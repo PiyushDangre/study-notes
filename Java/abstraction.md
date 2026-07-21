@@ -2,7 +2,7 @@
 
 - `abstract` keyword used
 - abstract class cannot be initialized - it can only be extended.
-- Even though they cannot be initialized - they have default java no-arg constructor or we can also define multi-argument constructors.
+- Even though they cannot be initialized - they have default java no-arg constructor or we can also define multi-argument constructors. This constructor is primarily called by subclass constructor using `super()` keyword.
 - Methods without body can be declared using abstract keyword
 - Abstract classes may or may not have abstract methods.
 - But class containing even one abstract method must be declared abstract class.
