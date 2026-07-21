@@ -20,6 +20,6 @@
 - Static method cannot be overridden and final method cannot be inherited (and overridden).
 - Constructor cannot be overriden.
 
-<img width="2155" height="1196" alt="Method_Inheritance_Rules" src="https://github.com/user-attachments/assets/0abb608e-f451-4e29-b6dc-1a25e73f38d6" />
+<img width="2155" height="1196" alt="Method_Inheritance_Rules_2" src="https://github.com/user-attachments/assets/ca04e025-6d8c-4354-ac6b-96904e5f76fb" />
 
   
