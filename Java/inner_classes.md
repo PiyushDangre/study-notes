@@ -2,8 +2,9 @@
 
 1. Instance Nested class : 
 2. Method local class
-3. **Anonymous class** --> In this the compiler will create a subclass of the interface or abstract class for which you are creating an anonymous object. 
-4. Static Nested class
+3. **Anonymous class**
+    - In this the compiler will create a subclass of the interface or abstract class for which you are creating an anonymous object. 
+5. Static Nested class
     - Static inner class are allowed only. Not non-static ones. 
     - Static class do not need to create an instance of outer containing class in order to create its own instance.
    
