@@ -1,0 +1,9 @@
+### Inner Classes
+
+1. Instance Nested class : 
+2. Method local class
+3. **Anonymous class** --> In this the compiler will create a subclass of the interface or abstract class for which you are creating an anonymous object. 
+4. Static Nested class
+
+   
+<img width="500" height="265" alt="inner_classes" src="https://github.com/user-attachments/assets/5f3a0dff-2302-4898-839f-add423bf336f" />
