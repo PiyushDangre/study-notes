@@ -9,3 +9,10 @@
 to convert to daemon --> `Thread.setDaemon(true)`
 
 Thread cannot be marked as daemon once it has started ie. `start` method has been called upon it. 
+
+### ThreadGroup
+
+- Represents a group of threads.
+
+Creation -> `ThreadGroup pGroup = new ThreadGroup("Parent ThreadGroup");`
+Add thread in thread group -> `Thread t1 = new Thread(pGroup, this);`
