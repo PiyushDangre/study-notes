@@ -36,9 +36,8 @@ public class Tester {
 }
 ```
 
-- Lazy initialization of the class - so here the class is not initialized until getInstanmce(0 is called :
-
-Below is a proper creation of Singleton class :
+- Lazy initialization of the class - so here the class is not initialized until getInstanmce() is called.
+- Also notice the way below the singleton class has been made thread safe - by using synchronized keyword for getInstance(). 
 
 ```Java
 package com.tutorialspoint;
@@ -50,7 +49,7 @@ class ClassicSingleton {
       // Exists only to defeat instantiation.
    }
 
-   public static ClassicSingleton getInstance() {
+   public static synchronized  ClassicSingleton getInstance() {
       if(instance == null) {
          instance = new ClassicSingleton();
       }
