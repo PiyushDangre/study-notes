@@ -35,3 +35,37 @@ public class Tester {
    }
 }
 ```
+
+- Lazy initialization of the class - so here the class is not initialized until getInstanmce(0 is called :
+
+Below is a proper creation of Singleton class :
+
+```Java
+package com.tutorialspoint;
+
+class ClassicSingleton {
+
+   private static ClassicSingleton instance = null;
+   private ClassicSingleton() {
+      // Exists only to defeat instantiation.
+   }
+
+   public static ClassicSingleton getInstance() {
+      if(instance == null) {
+         instance = new ClassicSingleton();
+      }
+      return instance;
+   }
+   
+   protected void demoMethod( ) {
+      System.out.println("demoMethod for singleton");
+   }
+}
+public class Tester {
+
+   public static void main(String[] args) {
+      ClassicSingleton tmp = ClassicSingleton.getInstance( );
+      tmp.demoMethod( );
+   }
+}
+```
