@@ -29,3 +29,9 @@ Add thread in thread group -> `Thread t1 = new Thread(pGroup, this);`
 How to add the shutdown hook?
 
 `Runtime.getRuntime().addShutdownHook(Thread t)`
+
+Now the thread will run just before the JVM is shut down.
+
+Similarly can remove also - 
+
+`Runtime.getRuntime().removeShutdownHook(Thread t)`
