@@ -18,6 +18,7 @@ MASHREQ --
 - when do u use abstract class and when do u use interfaces
 - composition vs inheritance - when to use which, which is more flexible if I want to add more functionality later. 
 - multiple inheritance in java
+- What are the design priciples in Java? Explain SOLID principles.
 - design patterns - what is factory : write code
 - what all design patterns used - write with code
 - Create objects and explain the flow in terms of OOPS concepts : An e-commerce platform needs to support Credit Cards, PayPal, and UPI. How do you design this without writing giant if-else blocks?
