@@ -5,6 +5,7 @@
 - limit
 - peek
 - flatMap
+- sorted
 
 
 ### Terminal Stream Operators
