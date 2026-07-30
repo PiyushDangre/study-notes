@@ -4,7 +4,7 @@
 - Structural - Bridge, Adaptor, Proxy, Flyweight, Facade, Decorator, Composite
 - Behavioral - Chain of Responsibility, Iterator, Mediator, Command, Memento, Observer, Strategy, Template
 
-Based on this article - (https://medium.com/womenintechnology/stop-memorizing-design-patterns-use-this-decision-tree-instead-e84f22fca9fa)
+Based on this article - https://medium.com/womenintechnology/stop-memorizing-design-patterns-use-this-decision-tree-instead-e84f22fca9fa
 
 ### When to use which one?
 
