@@ -6,5 +6,5 @@ Behavioral - Chain of Responsibility, Iterator, Mediator, Command, Memento, Obse
 
 ### When to use which one?
 
-![Uploading design_patterns_decision_tree.png…]()
+<img width="2000" height="2345" alt="design_patterns_decision_tree" src="https://github.com/user-attachments/assets/e12fce5a-c05e-44c4-a76e-7bb67abe10fd" />
 
