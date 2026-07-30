@@ -24,6 +24,7 @@ MASHREQ --
 - Create objects and explain the flow in terms of OOPS concepts : An e-commerce platform needs to support Credit Cards, PayPal, and UPI. How do you design this without writing giant if-else blocks?
 - New java features after java 8 - after java 9-21. 
 - What is virtual threads, how to create one - with code. What benefits etc.
+- What is difference between Threads and Virtual threads?
 - Runnable vs Callable
 - what is immutable class, how to create? 
 - what are inbuilt java classes which are immutable - apart from string. 
