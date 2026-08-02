@@ -23,3 +23,18 @@ Source -> https://jenkov.com/tutorials/java-concurrency/compare-and-swap.html
 
 - Guaranteed to be atomic by the chipset / Hardware not OS or JVM level.
 - Hence it is more efficient
+
+
+## Semaphores
+
+Semaphore is another way of limiting access to any critical section of code to a number of threads concurrently. 
+
+Excellent Video -> https://www.youtube.com/watch?v=shH38znT_sQ
+
+Semaphore semaphore = new Semaphore(2);
+
+** Important Methods **
+
+semaphore.acquire();
+semaphore.release();
+
