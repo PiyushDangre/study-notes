@@ -35,6 +35,6 @@ Semaphore semaphore = new Semaphore(2);
 
 ** Important Methods **
 
-semaphore.acquire();
-semaphore.release();
+- `semaphore.acquire();`
+- `semaphore.release();`
 
