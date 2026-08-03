@@ -7,6 +7,7 @@
 - Explain annotations used for JPA Joins
 - What is fast JPA or Native Queries.
 - Kong API Gateway Questions and General API Gateway Questions
+- When should we not use stream API methods?
 - Sorting questions in Stream API (Live coding) and determining time complexity, best case, worst case.
 - SOLID Principles
 - Autoconfiguration, Dependency Injection.
