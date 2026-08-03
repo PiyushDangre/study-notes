@@ -4,6 +4,7 @@
 
 - Microservices Design Patterns
 - Explain SAGA
+- Explain CircuitBreaker pattern
 - Explain annotations used for JPA Joins
 - What is fast JPA or Native Queries.
 - Kong API Gateway Questions and General API Gateway Questions
