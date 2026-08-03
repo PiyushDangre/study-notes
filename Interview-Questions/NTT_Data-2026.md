@@ -12,4 +12,5 @@
 - Autoconfiguration, Dependency Injection.
 - What is Optimistic Locking (in DB).
 - How JWT token works - explain.
-- How does Auth2 protocol work? Explain. 
+- How does Auth2 protocol work? Explain.
+- Tell us about a production issue you faced and how did you fix it
