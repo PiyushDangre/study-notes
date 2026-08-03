@@ -17,3 +17,4 @@
 - How does Auth2 protocol work? Explain.
 - Tell us about a production issue you faced and how did you fix it
 - What are the various components in Microoservice Architecture?
+- What is Role based access control and Entity based access control? How did you implement it in your project?
