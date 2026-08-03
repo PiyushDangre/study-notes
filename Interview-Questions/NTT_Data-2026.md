@@ -11,3 +11,5 @@
 - SOLID Principles
 - Autoconfiguration, Dependency Injection.
 - What is Optimistic Locking (in DB).
+- How JWT token works - explain.
+- How does Auth2 protocol work? Explain. 
