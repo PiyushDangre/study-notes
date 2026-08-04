@@ -1,3 +1,7 @@
+
+
+Only programs were asked. 
+
        int[] arr = [1,2,3,4,5,0,6,7];
         find all subarrays with sum 7
         
