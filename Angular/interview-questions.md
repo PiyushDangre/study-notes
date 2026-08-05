@@ -7,3 +7,6 @@ https://voidchetan.github.io/interview_question_app_angular_17/home
 Above questions discussed in video format 
 
 https://www.youtube.com/watch?v=VjINzkuJ1UU
+
+Angular crash course playlist - 
+ - https://www.youtube.com/playlist?list=PL8p2I9GklV45T_W46ANgKk9EF2OJdeF64
